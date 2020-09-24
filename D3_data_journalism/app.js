@@ -6,7 +6,7 @@ var margin = {
   top: 20,
   right: 30,
   bottom: 60,
-  left: 20
+  left: 50
 };
 
 var width = svgWidth - margin.left - margin.right;
@@ -100,7 +100,7 @@ d3.csv("data.csv").then(function(stateData) {
 
     // Step 8: Create event listeners to display and hide the tooltip
     // ==============================
-    circlesGroup.on("click", function(data) {
+    circlesGroup.on("mouseover", function(data) {
       toolTip.show(data, this);
     })
       // onmouseout event
